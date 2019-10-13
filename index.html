@@ -12,28 +12,48 @@
      <header>
           <h1 class="head">Tic Tac Toe</h1>
      </header>
+     <div class="SContainer">
+               <div class="xBoard">
+                    <h2 class= "scorexTitle">X PLAYER</h2>
+                    <h3 class="winTitle">WIN</h3>
+                    <h3 class="xWinScore">0</h3>
+                    <h3 class="loseTitle">LOSE</h3>
+                    <h3 class="xLoseScore">0</h3>
+                    <h3 class="tieTitle">TIE</h3>
+                    <h3 class="xTieScore">0</h3>
+               </div>
+               <div class="oBoard">
+                    <h2 class= "scoreoTitle">O PLAYER</h2>
+                    <h3 class="winTitle">WIN</h3>
+                    <h3 class="oWinScore">0</h3>
+                    <h3 class="loseTitle">LOSE</h3>
+                    <h3 class="oLoseScore">0</h3>
+                    <h3 class="tieTitle">TIE</h3>
+                    <h3 class="oTieScore">0</h3>
+               </div>
+          </div>
     <div class="container">
-       <table>
-            <tr>
-                 <td class="cl red" id="tr0"></td>
-                 <td class="cl red" id="tr1"></td>
-                 <td class="cl red" id="tr2"></td>
-            </tr>
-            <tr>
-                 <td class="cl red" id="tr3"></td>
-                 <td class="cl red" id="tr4"></td>
-                 <td class="cl red" id="tr5"></td>
-            </tr>
-            <tr>
-                 <td class="cl red" id="tr6"></td>
-                 <td class="cl red" id="tr7"></td>
-                 <td class="cl red" id="tr8"></td>
-            </tr>
-       </table>
+                    <table>
+                         <tr>
+                          <td class="cl" id="tr0"></td>
+                          <td class="cl" id="tr1"></td>
+                          <td class="cl" id="tr2"></td>
+                         </tr>
+                         <tr>
+                            <td class="cl" id="tr3"></td>
+                            <td class="cl" id="tr4"></td>
+                            <td class="cl" id="tr5"></td>
+                         </tr>
+                         <tr>
+                           <td class="cl" id="tr6"></td>
+                           <td class="cl" id="tr7"></td>
+                           <td class="cl" id="tr8"></td>
+                         </tr>
+                    </table>
        <div>
             <h1 class="turn" id="turn"></h1>
        </div>
-       <button class="start-game end-game">Start The Game</button>
+       <button class="start-game">Start The Game</button>
     </div>
     <script src="app.js"></script>
 </body>

@@ -1,6 +1,7 @@
 body {
-margin: auto 0;
+margin:  0;
 background-image:radial-gradient(circle,#D8A5A6,#CC4165);
+height: 30%;
 
 }
 .head{
@@ -57,14 +58,12 @@ table tr td:last-child{
 /* game play and replay button */
 button {
     /* display: flex; */
+    text-align: center;
     height: 30px;
     width: 200px;
-    margin: 200px 7vh ;
+    margin: 100px 7vh ;
 }
-.start-game{
-    display: flex;
-    text-align: center;
-}
+
 .green {
     display: none;
     background-color: green;
@@ -79,5 +78,29 @@ button {
     z-index: 3;
 }
 #turn {
-    background-color: gray;
+    background-color: none;
+    text-align: center;
 };
+h2>.scorexTitle{
+  font-size: 1px;
+}
+.xBoard{
+    position: absolute;
+    width: 15%;
+    padding: 2%;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 2%;
+    background-color: rgba(122, 122, 122, 0.4);
+    
+}
+.oBoard{
+    position: absolute;
+    width: 15%;
+    padding: 2%;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 75%;
+    background-color: rgba(122, 122, 122, 0.4);
+
+}
