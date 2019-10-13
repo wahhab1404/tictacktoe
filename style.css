@@ -1,0 +1,83 @@
+body {
+margin: auto 0;
+background-image:radial-gradient(circle,#D8A5A6,#CC4165);
+
+}
+.head{
+    text-align: center;
+    background-color: #2C243F;
+    height: 10vh;
+    margin-top: 0%;
+    color: cornsilk;
+    padding-top: 3%;
+    
+}
+
+.container{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -155px;
+   
+}
+/* style game cells */
+td {
+    height: 100px;
+    width: 100px;
+    background-color: none;
+    border:2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 500%;
+    cursor: pointer;
+
+}
+/* make it one border */
+table{
+    border-collapse:collapse; 
+    
+}
+/* Selecting table to row to remove the boarder */
+table tr:first-child td{
+    border-top: 0;
+}
+/* Romove buttom border */
+table tr:last-child td{
+    border-bottom: 0;
+}
+/* To remove left border  */
+table tr td:first-child{
+    border-left: 0;
+}
+/* To remove right border  */
+table tr td:last-child{
+    border-right: 0;
+}
+/* game play and replay button */
+button {
+    /* display: flex; */
+    height: 30px;
+    width: 200px;
+    margin: 200px 7vh ;
+}
+.start-game{
+    display: flex;
+    text-align: center;
+}
+.green {
+    display: none;
+    background-color: green;
+    color: ivory;
+};
+.turn {
+    display: flex;
+    text-align: center;
+    height: 10%;
+    width: 40%;
+    
+    z-index: 3;
+}
+#turn {
+    background-color: gray;
+};
