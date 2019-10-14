@@ -13,25 +13,24 @@
           <h1 class="head">Tic Tac Toe</h1>
      </header>
      <div class="SContainer">
+          <div class="roundContainer">
+               <h2 class="roundHead">Round</h2>
+               <h2 class="roundNo"></h2>
+          </div>
+          <!-- X player score board  -->
                <div class="xBoard">
                     <h2 class= "scorexTitle">X PLAYER</h2>
                     <h3 class="winTitle">WIN</h3>
                     <h3 class="xWinScore">0</h3>
-                    <h3 class="loseTitle">LOSE</h3>
-                    <h3 class="xLoseScore">0</h3>
-                    <h3 class="tieTitle">TIE</h3>
-                    <h3 class="xTieScore">0</h3>
                </div>
                <div class="oBoard">
+                    <!-- O Player score Board -->
                     <h2 class= "scoreoTitle">O PLAYER</h2>
                     <h3 class="winTitle">WIN</h3>
                     <h3 class="oWinScore">0</h3>
-                    <h3 class="loseTitle">LOSE</h3>
-                    <h3 class="oLoseScore">0</h3>
-                    <h3 class="tieTitle">TIE</h3>
-                    <h3 class="oTieScore">0</h3>
                </div>
           </div>
+          <!-- game container -->
     <div class="container">
                     <table>
                          <tr>
@@ -53,7 +52,7 @@
        <div>
             <h1 class="turn" id="turn"></h1>
        </div>
-       <button class="start-game">Start The Game</button>
+       <button class="gameRestart">Start The Game</button>
     </div>
     <script src="app.js"></script>
 </body>

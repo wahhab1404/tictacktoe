@@ -1,31 +1,35 @@
 body {
-margin:  0;
-background-image:radial-gradient(circle,#D8A5A6,#CC4165);
-height: 30%;
+margin:0 auto;
+background-image:radial-gradient(circle,#e0ea83,#ff9033);
+
 
 }
 .head{
     text-align: center;
-    background-color: #2C243F;
+    background-color: #380000;
     height: 10vh;
     margin-top: 0%;
     color: cornsilk;
     padding-top: 3%;
     
 }
-
+/* the container for table, button, turn text  */
 .container{
     position: absolute;
-    top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 250px;
     left: 50%;
-    margin-top: -50px;
-    margin-left: -155px;
+    margin-top: -100px;
+    margin-left: -175px;
    
 }
 /* style game cells */
 td {
-    height: 100px;
-    width: 100px;
+
+    height: 120px;
+    width: 120px;
     background-color: none;
     border:2px solid black;
     text-align: center;
@@ -61,7 +65,12 @@ button {
     text-align: center;
     height: 30px;
     width: 200px;
-    margin: 100px 7vh ;
+    background-color: #8e0010;
+    border: 0px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 3%;
 }
 
 .green {
@@ -75,7 +84,7 @@ button {
     height: 10%;
     width: 40%;
     
-    z-index: 3;
+   
 }
 #turn {
     background-color: none;
@@ -103,4 +112,14 @@ h2>.scorexTitle{
     margin-left: 75%;
     background-color: rgba(122, 122, 122, 0.4);
 
+}
+.scorexTitle{
+    
+    padding: 10px;
+}
+.roundContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -30px;
 }
