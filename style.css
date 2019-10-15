@@ -1,7 +1,8 @@
 body {
 margin:0 auto;
-background-image:radial-gradient(circle,#e0ea83,#ff9033);
-
+background-image:radial-gradient(circle,#1C3F7C,#1F3F7A);
+/* object-fit: cover; */
+background-color: #1C3F7C;
 
 }
 .head{
@@ -13,6 +14,7 @@ background-image:radial-gradient(circle,#e0ea83,#ff9033);
     padding-top: 3%;
     
 }
+
 /* the container for table, button, turn text  */
 .container{
     position: absolute;
@@ -20,8 +22,8 @@ background-image:radial-gradient(circle,#e0ea83,#ff9033);
     flex-direction: column;
     align-items: center;
     top: 250px;
-    left: 50%;
-    margin-top: -100px;
+    left: 48%;
+    margin-top: 50%;
     margin-left: -175px;
    
 }
@@ -31,14 +33,14 @@ td {
     height: 120px;
     width: 120px;
     background-color: none;
-    border:2px solid black;
+    border:10px solid black;
     text-align: center;
     vertical-align: middle;
     font-size: 500%;
     cursor: pointer;
 
 }
-/* make it one border */
+/* make it AS one border */
 table{
     border-collapse:collapse; 
     
@@ -63,8 +65,8 @@ table tr td:last-child{
 button {
     /* display: flex; */
     text-align: center;
-    height: 30px;
-    width: 200px;
+    height: 50px;
+    width: 250x;
     background-color: #8e0010;
     border: 0px;
     font-size: 20px;
@@ -73,53 +75,208 @@ button {
     margin-bottom: 3%;
 }
 
-.green {
-    display: none;
-    background-color: green;
-    color: ivory;
-};
+
 .turn {
     display: flex;
     text-align: center;
     height: 10%;
-    width: 40%;
+    width: 70%;
+    
+    
     
    
 }
-#turn {
-    background-color: none;
-    text-align: center;
-};
-h2>.scorexTitle{
-  font-size: 1px;
-}
+
+
 .xBoard{
     position: absolute;
     width: 15%;
-    padding: 2%;
+    padding: 1%;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 75%;
     margin-left: 2%;
     background-color: rgba(122, 122, 122, 0.4);
-    
+
 }
 .oBoard{
     position: absolute;
     width: 15%;
-    padding: 2%;
+    padding: 1%;
     text-align: center;
-    margin-top: 5%;
-    margin-left: 75%;
+    margin-top: 75%;
+    margin-left: 78%;
     background-color: rgba(122, 122, 122, 0.4);
 
 }
 .scorexTitle{
-    
     padding: 10px;
 }
-.roundContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -30px;
+
+/* FIRST PAGE */
+.firstPage {
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(./imgs/brain.jpg);
+    background-size: cover;
+}
+
+h1.main{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 80px;
+    margin-top: 35%;
+    margin-left: 35%;
+}
+h2.main {
+    margin-top: 1%;
+    margin-left: 45%;
+    color:rgba(255, 255, 255, 0.8);
+
+}
+h4{
+    /* background: crimson; */
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 40px;
+    margin-top: 15%;
+    margin-bottom: 10%;
+
+    /* width: 100%; */
+    text-align: center;
+}
+
+
+/* Media */
+/* for iPhone X */
+@media only screen and (max-width: 375px){ 
+    h4 {
+        font-size: 20px;
+    }
+    .oBoard{
+        font-size: 10px;
+        width: 100px;
+        height: 100px;
+        margin-top: 200px;
+        margin-left: 60%;
+    }
+    .xBoard{
+        font-size: 10px;
+        width: 100px;
+        height: 100px;
+        margin-top: 200px;
+        margin-left: 8%;
+    }
+    h1.main{
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 30%;
+    }
+    h2.main{
+        display: none;
+    }
+    td {
+        height: 80px;
+        width: 80px;
+        
+    }
+    .container{
+        margin-top: 30%;
+        margin-left: -125px;
+    }
+    h1.turn {
+        font-size: 20px;
+        text-align: center;
+        margin-left: 30px;
+    }
+    
+    
+
+}
+/* IPHONE 6-7-8 */
+@media only screen and (max-width: 414px){ 
+    h4 {
+        font-size: 20px;
+    }
+    .oBoard{
+        font-size: 10px;
+        width: 100px;
+        height: 100px;
+        margin-top: 150px;
+        margin-left: 65%;
+    }
+    .xBoard{
+        font-size: 10px;
+        width: 100px;
+        height: 100px;
+        margin-top: 150px;
+        margin-left: 8%;
+    }
+    h1.main{
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 30%;
+    }
+    h2.main{
+        display: none;
+    }
+    td {
+        height: 80px;
+        width: 80px;
+        
+    }
+    .container{
+        margin-top: 7%;
+        margin-left: -125px;
+    }
+    h1.turn {
+        font-size: 20px;
+        text-align: center;
+        
+    }
+    
+    
+
+}
+/* IPAD */
+@media only screen and (max-width: 768px){ 
+    h4 {
+        font-size: 49px;
+    }
+    .oBoard{
+        font-size: 18px;
+        width: 150px;
+        height: 150px;
+        margin-top: 200px;
+        margin-left: 65%;
+    }
+    .xBoard{
+        font-size: 18px;
+        width: 150px;
+        height: 160px;
+        margin-top: 200px;
+        margin-left: 7%;
+    }
+    h1.main{
+        font-size: 65px;
+        margin-top: 10px;
+        margin-left: 30%;
+    }
+    h2.main{
+        display: none;
+    
+    }
+    td {
+        height: 120px;
+        width: 120px;
+        
+    }
+    .container{
+        margin-top: 25%;
+        margin-left: -185px;
+    }
+    h1.turn {
+        font-size: 25px;
+        text-align: center;
+        margin-left: 10px;
+    }
 }

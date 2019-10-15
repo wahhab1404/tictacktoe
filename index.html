@@ -10,13 +10,16 @@
 <body>
 
      <header>
-          <h1 class="head">Tic Tac Toe</h1>
+          <!-- <h1 class="head">Tic Tac Toe</h1> -->
      </header>
+     <div class="firstPage" id="header">
+          <h1 class="main">Tic Tac Toe</h1>
+          <h2 class="main">Scroll To Play</h2>
+          <h4 class="roundHead">Round </h4>
+     </div>
      <div class="SContainer">
-          <div class="roundContainer">
-               <h2 class="roundHead">Round</h2>
-               <h2 class="roundNo"></h2>
-          </div>
+         
+          
           <!-- X player score board  -->
                <div class="xBoard">
                     <h2 class= "scorexTitle">X PLAYER</h2>
@@ -30,8 +33,9 @@
                     <h3 class="oWinScore">0</h3>
                </div>
           </div>
-          <!-- game container -->
+               <!-- game container -->
     <div class="container">
+               <!-- GAME GRID -->
                     <table>
                          <tr>
                           <td class="cl" id="tr0"></td>
@@ -49,10 +53,12 @@
                            <td class="cl" id="tr8"></td>
                          </tr>
                     </table>
-       <div>
+       <div class="botContainer">
+            <!-- TURN IDENTIFYER BOX (X TUERN / O TURN) -->
             <h1 class="turn" id="turn"></h1>
        </div>
        <button class="gameRestart">Start The Game</button>
+       <!-- <button class="newGame">Rest Games</button> -->
     </div>
     <script src="app.js"></script>
 </body>
