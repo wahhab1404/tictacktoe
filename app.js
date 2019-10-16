@@ -1,5 +1,6 @@
-
-let gameBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // start clean game board
+// START EMPTY GAME BOARD
+let gameBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+let winner = false;
 
 
 const playerOne = 'O'; // first player
@@ -9,26 +10,23 @@ const button = document.querySelector("button");
 let xWinCount = document.querySelector(".xWinScore"); // x win counter
 let oWinCount = document.querySelector(".oWinScore"); // o win counter 
 const roundTag = document.querySelector(".roundHead");// to use it in round counter 
+const cel = document.querySelector('.cel');
+let turn = document.querySelector(".turn");// us it tos how turn in the bottom box
+const tr0 = document.querySelector("#tr0");
+const tr = document.querySelectorAll(".cl");
 
 let counter = 0;
 let xscore = 0;
 let oscore = 0;
 let roundCounter = 1;
 
-
-
-let turn = document.querySelector(".turn");
 turn.innerText = " X Starts!"
-
-
-
 
 // Adding round counter
 roundTag.innerText = "Round " + roundCounter
 
 let playerTurn = true; // determin playing player 
-const tr0 = document.querySelector("#tr0");
-const tr = document.querySelectorAll(".cl");
+
 const remove = function () {           //Remove eventlistener if any one win and call it in checkWin function
     for (let i = 0; i < tr.length; i++) {
         tr[i].removeEventListener('click', onClick)
@@ -50,15 +48,16 @@ const turnChange = function () { // ANNOUNCE PLAYER TURN IN THE BOTTOM
 
 };
 
-const cel = document.querySelector('.cel');
+
 
 // wining conditions...
-const winCheck = function () { // wining conditions...
+const winCheck = function () { 
     if (gameBoard[0] == 1 && gameBoard[1] == 1 && gameBoard[2] == 1) {
         turn.innerText = "O WINS" 
         oscore++; 
         button.innerText = "Playe New Game"
         document.body.style.backgroundImage = "green";
+        winner = true 
         remove()
 
 
@@ -67,6 +66,7 @@ const winCheck = function () { // wining conditions...
         turn.innerText = "O WINS"
         oscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
 
     }
@@ -74,44 +74,49 @@ const winCheck = function () { // wining conditions...
         turn.innerText = "O WINS"
         oscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
     }
     else if (gameBoard[0] == 1 && gameBoard[3] == 1 && gameBoard[6] == 1) {
         turn.innerText = "O WINS"
         oscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
     }
     else if (gameBoard[1] == 1 && gameBoard[4] == 1 && gameBoard[7] == 1) {
         turn.innerText = "O WINS"
         button.innerText = "Playe New Game"
         oscore++;
+        winner = true
         remove()
     }
     else if (gameBoard[2] == 1 && gameBoard[5] == 1 && gameBoard[8] == 1) {
         turn.innerText = "O WINS"
         button.innerText = "Playe New Game"
         oscore++;
+        winner = true
         remove()
     }
     else if (gameBoard[0] == 1 && gameBoard[4] == 1 && gameBoard[8] == 1) {
         turn.innerText = "O WINS"
         button.innerText = "Playe New Game"
         oscore++;
+        winner = true
         remove()
     }
     else if (gameBoard[2] == 1 && gameBoard[4] == 1 && gameBoard[6] == 1) {
         turn.innerText = "O WINS"
         oscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
     }
     else if (gameBoard[0] == 2 && gameBoard[1] == 2 && gameBoard[2] == 2) {
         turn.innerText = "X WINS";
         xscore++;
-
         turn.style.color = 'red'
-        roundCounter++;
+        winner = true
         button.innerText = "Playe New Game"
 
         remove()
@@ -120,12 +125,14 @@ const winCheck = function () { // wining conditions...
         turn.innerText = "X WINS"
         xscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
     }
     else if (gameBoard[6] == 2 && gameBoard[7] == 2 && gameBoard[8] == 2) {
         turn.innerText = "X WINS"
         xscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
 
     }
@@ -133,6 +140,7 @@ const winCheck = function () { // wining conditions...
         turn.innerText = "X WINS"
         xscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
 
     }
@@ -140,31 +148,35 @@ const winCheck = function () { // wining conditions...
         turn.innerText = "X WINS"
         xscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
     }
     else if (gameBoard[2] == 2 && gameBoard[5] == 2 && gameBoard[8] == 2) {
         turn.innerText = "X WINS"
         button.innerText = "Playe New Game"
         xscore++;
+        winner = true
         remove()
     }
     else if (gameBoard[0] == 2 && gameBoard[4] == 2 && gameBoard[8] == 2) {
         turn.innerText = "X WINS"
         xscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
     }
     else if (gameBoard[2] == 2 && gameBoard[4] == 2 && gameBoard[6] == 2) {
         turn.innerText = "X WINS"
         xscore++;
         button.innerText = "Playe New Game"
+        winner = true
         remove()
     }
     else if (counter == 9) {
         console.log("Tie")
         turn.innerText = "Tie ..WTF!!"
         button.innerText = "Playe New Game"
-        
+        winner = true
         remove()
     }
     // STORE VALUES OF SCORS
@@ -174,7 +186,9 @@ const winCheck = function () { // wining conditions...
     
 
 }
-const onClick = function () { // change player turn
+
+// change player turn
+const onClick = function () { 
     
     playerTurn = !playerTurn
     counter++;
@@ -205,7 +219,6 @@ const onClick = function () { // change player turn
 //  RESET AND START GAME BUTTONS
 const restartBut = document.querySelector(".gameRestart");
 const buttonNew = document.querySelector(".newGame");
-
 const addEvents = function () {
     for (let i = 0; i < tr.length; i++) {
         tr[i].addEventListener('click', onClick)
@@ -216,6 +229,11 @@ const addEvents = function () {
 
 // RESTART / RESET THE GAME 
     const gameRest = function () {
+        console.log(winner);
+        
+        if(!winner)
+        return;
+        winner = false;
         counter = 0;
         // REST THE BOARD ARRAY 
         gameBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0];

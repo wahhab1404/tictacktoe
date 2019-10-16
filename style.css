@@ -21,7 +21,7 @@ background-color: #1C3F7C;
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 250px;
+    top: 200px;
     left: 48%;
     margin-top: 50%;
     margin-left: -175px;
@@ -135,20 +135,18 @@ h2.main {
 
 }
 h4{
-    /* background: crimson; */
+    
     color: rgba(255, 255, 255, 0.8);
     font-size: 40px;
-    margin-top: 15%;
+    margin-top: 10%;
     margin-bottom: 10%;
-
-    /* width: 100%; */
     text-align: center;
 }
 
 
 /* Media */
 /* for iPhone X */
-@media only screen and (max-width: 375px){ 
+ @media only screen and (max-width: 375px){ 
     h4 {
         font-size: 20px;
     }
@@ -193,7 +191,7 @@ h4{
 
 }
 /* IPHONE 6-7-8 */
-@media only screen and (max-width: 414px){ 
+@media only screen and (min-width: 375), (max-width: 414px){ 
     h4 {
         font-size: 20px;
     }
@@ -236,11 +234,12 @@ h4{
     
     
 
-}
+} 
 /* IPAD */
-@media only screen and (max-width: 768px){ 
+/*  
+ @media only screen and (min-width: 414px), (max-width: 768px){  
     h4 {
-        font-size: 49px;
+        font-size: 9px;
     }
     .oBoard{
         font-size: 18px;
@@ -279,4 +278,4 @@ h4{
         text-align: center;
         margin-left: 10px;
     }
-}
+}   */
